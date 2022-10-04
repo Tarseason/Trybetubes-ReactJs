@@ -13,7 +13,6 @@ class Search extends React.Component {
 
   handleChange = (event) => {
     const { value } = event.target;
-    const { pesquise } = this.state;
     this.setState({
       pesquisa: value,
     });
