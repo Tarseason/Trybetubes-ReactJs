@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Login from './pages/Login';
 import Search from './pages/Search';
 import Album from './pages/Album';
@@ -12,16 +12,6 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <nav>
-          <ul>
-            <li><Link to="/">Login</Link></li>
-            <li><Link to="/search">Search</Link></li>
-            <li><Link to="/album/:id">Album</Link></li>
-            <li><Link to="/favorites">Favorites</Link></li>
-            <li><Link to="/profile">Profile</Link></li>
-            <li><Link to="/profile/edit">ProfileEdit</Link></li>
-          </ul>
-        </nav>
         <Switch>
           <Route
             path="/"
