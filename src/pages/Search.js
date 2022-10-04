@@ -8,7 +8,7 @@ class Search extends React.Component {
         <Header />
         <input
           type="text"
-          placeholder="Procurar"
+          placeholder="Procurar search page"
         />
       </div>
     );
