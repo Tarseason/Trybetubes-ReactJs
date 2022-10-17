@@ -23,6 +23,7 @@ class App extends React.Component {
             component={ Search }
           />
           <Route
+            exact
             path="/album/:id"
             component={ Album }
           />
