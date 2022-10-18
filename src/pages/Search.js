@@ -47,6 +47,7 @@ class Search extends React.Component {
       <div data-testid="page-search">
         <Header />
         <input
+          value={ pesquisa }
           name="pesquisa"
           data-testid="search-artist-input"
           type="text"
