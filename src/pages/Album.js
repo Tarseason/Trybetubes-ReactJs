@@ -28,32 +28,39 @@ class Album extends React.Component {
 
   render() {
     const { infoAlbum, music } = this.state;
-    console.log(music);
     return (
       <div>
         <div data-testid="page-album">
           <Header />
-        </div>
-        <div data-testid="artist-name">
-          {infoAlbum.artistName}
-        </div>
-        <div data-testid="album-name">
-          {infoAlbum.collectionName}
-        </div>
-        <div>
-          {
-            music.map((som, index) => (
-              <div key={ index }>
-                <MusicCard
-                  img={ som.artworkUrl100 }
-                  som={ som.previewUrl }
-                  nomesom={ som.trackName }
-                />
-              </div>
-            ))
-          }
-        </div>
 
+          <div>
+            {/* {
+              carregando ? <Loading /> : (
+
+              )
+            } */}
+            <div>
+              <div data-testid="artist-name">
+                {infoAlbum.artistName}
+              </div>
+              <div data-testid="album-name">
+                {infoAlbum.collectionName}
+              </div>
+
+              <div>
+                {
+                  music.map((som, index) => (
+                    <div key={ index }>
+                      <MusicCard
+                        som={ som }
+                      />
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
