@@ -50,7 +50,7 @@ class MusicCard extends React.Component {
   };
 
   render() {
-    const { som: { trackId, previewUrl, trackName } } = this.props;
+    const { som: { trackId, previewUrl, trackName }, disFave } = this.props;
     const { carregando, checked } = this.state;
 
     if (carregando) {
@@ -74,7 +74,7 @@ class MusicCard extends React.Component {
             name="favorite"
             type="checkbox"
             data-testid={ `checkbox-music-${trackId}` }
-            onChange={ this.handleCheck }
+            onChange={ disFave || this.handleCheck }
             checked={ checked }
           />
         </label>
@@ -83,12 +83,17 @@ class MusicCard extends React.Component {
   }
 }
 
+MusicCard.defaultProps = {
+  disFave: null,
+};
+
 MusicCard.propTypes = {
   som: PropTypes.shape({
     trackId: PropTypes.number,
     previewUrl: PropTypes.string,
     trackName: PropTypes.string,
   }).isRequired,
+  disFave: PropTypes.func,
 };
 
 export default MusicCard;
