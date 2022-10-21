@@ -39,9 +39,7 @@ class Profile extends React.Component {
                 data-testid="profile-image"
               />
               <p>{algo.description}</p>
-              <div>
-                <Link to="/profile/edit">Editar perfil</Link>
-              </div>
+              <Link to="/profile/edit">Editar perfil</Link>
             </div>
           </div>
         )}
